@@ -5,12 +5,14 @@ class Solution:
         # Update rule:        x = x - learning_rate * f'(x)
         # Round final answer to 5 decimal places
 
-        mini = init 
+        optim = init 
 
-        for _ in range(iterations): 
-            derivative = 2 * mini 
-            mini = mini - learning_rate * derivative
+        for _ in range(iterations):
+            derivative = optim * 2
+            optim = optim - learning_rate * derivative
 
-        return round(mini, 5)
+        return round(optim, 5) 
+
+        
 
 
